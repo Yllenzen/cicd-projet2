@@ -45,6 +45,9 @@ jobs:
       - name: Installation dependencies
         run: npm ci --prefer-offline
 
+      - name: exécute les tests
+        run: npm run test:ci
+
       - name: Démarrer le linter
         run: npm run lint
 
@@ -52,7 +55,7 @@ jobs:
         run: npm audit fix --audit-level=moderate
 
       - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
 
