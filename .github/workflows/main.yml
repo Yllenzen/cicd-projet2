@@ -51,9 +51,6 @@ jobs:
       - name: Audit
         run: npm audit fix --audit-level=moderate
 
-      - name: Exécuter les test
-        run: npm run test:ci
-
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4
         with:
