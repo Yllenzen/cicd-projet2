@@ -25,7 +25,7 @@ jobs:
         run: npm run lint
 
       - name: Audit
-        run: npm audit --audit-level=moderate
+        run: npm audit fix --audit-level=moderate
 
   test-node-api:
     runs-on: ubuntu-latest
@@ -49,7 +49,7 @@ jobs:
         run: npm run lint
 
       - name: Audit
-        run: npm audit --audit-level=moderate
+        run: npm audit fix --audit-level=moderate
 
       - name: Exécuter les test
         run: npm run test:ci
